@@ -43,4 +43,10 @@ public class parkingSpotTest {
         ParkingSpot parkingSpot2 = new ParkingSpot(2, ParkingType.CAR, false);
         assertThat(parkingSpot1.equals(parkingSpot2)).isFalse();
     }
+
+    @Test
+    public void equalsWithNullParameter() {
+        ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
+        assertThat(parkingSpot.equals(null)).isFalse();
+    }
 }
